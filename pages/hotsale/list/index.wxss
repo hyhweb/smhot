@@ -1,0 +1,10 @@
+/* pages/hotsale/list/index.wxss */
+
+.weui-navbar__slider {
+  width: 50%;
+}
+
+.weui-navbar {
+  position: fixed;
+  background: #fff;
+}
