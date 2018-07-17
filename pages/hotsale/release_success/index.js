@@ -1,35 +1,21 @@
-// pages/hotsale/my/index.js
-const app = getApp();
+// pages/hotsale/release_success/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-     userInfo:{}
-  },
-
-  _getUserInfo:function(id){
-    var param = {
-      url: '/user/select/'+id,
-      method: 'get',
-      success: (res) => {
-        if (res.success) {
-          
-          this.setData({
-            userInfo: res.result
-          })
-        }
-      }
-    }
-    app.request(param);
+    id:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var id = options.id;
+    this.setData({
+      id:id
+    })
   },
 
   /**
@@ -43,7 +29,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this._getUserInfo(1)
+  
   },
 
   /**

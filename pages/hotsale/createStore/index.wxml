@@ -1,0 +1,50 @@
+<view class="page">
+  <view class="page__bd">
+    <form bindsubmit="formSubmit">
+    <view class="weui-cells weui-cells_after-title">
+
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">店名</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="" name="store_name" />
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">店长</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="" name="store_owner" />
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">手机号</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="" name="store_phone" />
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">地址</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="" name="store_address" />
+        </view>
+      </view>
+
+
+    </view>
+    <view class="pad20" style="padding-top:50rpx;">
+    <button type='primary'  formType="submit" style='display:block;' class="weui-btn"  size="mini">确定</button>
+  </view>
+    </form>
+
+  </view>
+</view>

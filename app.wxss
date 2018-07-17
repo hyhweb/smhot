@@ -12,3 +12,17 @@
 .pad20{
   padding:20rpx;
 }
+.padb20{
+  padding-bottom:20rpx;
+
+}
+.marb20{
+  margin-bottom: 20rpx;
+}
+.radius{
+  border-radius: 100%;
+}
+.large200{
+  width: 200rpx;
+  height: 200rpx;
+}

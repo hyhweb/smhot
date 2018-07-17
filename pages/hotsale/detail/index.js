@@ -22,12 +22,34 @@ Page({
     }
     app.request(param);
   },
+  collectHandle: function (event) {
+    console.log(event,'event');
+    var product_id = event.currentTarget.dataset.id;
+    var param = {
+      url: '/collect/insert',
+      method: 'post',
+      data: { 'user_id': 1, 'product_id': product_id},
+      success: (res) => {
+        if (res.success) {
+          wx.showToast({
+            title: '收藏成功'
+          })
+        }else{
+          wx.showToast({
+            title: '不能重复收藏'
+          })
+        }
+        
+      }
+    }
+    app.request(param);
+  },
+
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
     this.getDetail(options.id);
   },
 

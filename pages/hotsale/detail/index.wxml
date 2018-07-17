@@ -2,7 +2,7 @@
   <view class="page__bd">
 
     <view class="weui-panel">
-      <view class="weui-panel__bd">
+      <view class="weui-panel__bd" style='margin-bottom:100rpx;'>
        <image src='{{detail.pre_img}}'></image>
         <view class="weui-media-box weui-media-box_text">
           <view class="weui-media-box__title weui-media-box__title_in-text">{{detail.title}}</view>
@@ -13,11 +13,17 @@
           </view>
         </view>
 
-        <view wx:for="{{detail.imageslist}}">
+        <view wx:for="{{detail.imageslist}}" wx:key="{{index}}">
         <image src='{{item}}'></image>
         </view>
 
       </view>
+
+      <view class="weui-footer weui-footer_fixed-bottom" style="background:#fff;padding:10px;bottom:0;">
+            <view class="weui-footer__text">
+            <button class="weui-btn" type="primary" data-id="{{detail.product_id}}" bindtap="collectHandle">收藏</button>
+            </view>
+        </view>
     </view>
 
   </view>

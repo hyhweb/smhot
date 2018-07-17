@@ -1,4 +1,4 @@
-// pages/hotsale/my/index.js
+// pages/hotsale/collect/index.js
 const app = getApp();
 Page({
 
@@ -6,25 +6,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-     userInfo:{}
+    list:[]
   },
 
-  _getUserInfo:function(id){
+  _getCollectList: function (id) {
     var param = {
-      url: '/user/select/'+id,
-      method: 'get',
+      url: '/collect/getPageList',
+      method: 'post',
+      data: { id: id},
       success: (res) => {
         if (res.success) {
-          
+
           this.setData({
-            userInfo: res.result
+            list: res.result.list
           })
         }
       }
     }
     app.request(param);
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -43,7 +43,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this._getUserInfo(1)
+    this._getCollectList(1)
   },
 
   /**

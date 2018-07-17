@@ -1,0 +1,97 @@
+<view class="page">
+  <view class="page__bd">
+    <form bindsubmit="formSubmit">
+      <view class="weui-cells weui-cells_after-title">
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">新品标题</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="" name="title" />
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">新品描述</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="" name="description" />
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">原价</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="" name="price" />
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">折后价</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="" name="discount_price" />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">新品分类</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker name="category_id" bindchange="_bindcategorysChange" value="{{categorysIndex}}" range="{{categorys}}">
+              <view class="weui-select" style="border:none;">{{categorys[categorysIndex]}}</view>
+            </picker>
+          </view>
+        </view>
+
+
+
+        <view class="weui-cell ">
+        <view class="weui-cell__bd">
+          <view class="weui-uploader">
+
+            <view class="weui-uploader__hd">
+              <view class="weui-uploader__title">新品详图上传</view>
+              <view class="weui-uploader__info">{{files.length}}/5</view>
+            </view>
+
+            <view class="weui-uploader__bd">
+              <view class="weui-uploader__files" id="uploaderFiles">
+                <block wx:for="{{files}}" wx:key="*this">
+                  <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                    <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                  </view>
+                </block>
+
+                <view class="weui-uploader__input-box">
+                  <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                </view>
+              </view>
+            </view>
+
+          </view>
+        </view>
+      </view>
+
+
+
+
+      </view>
+
+
+      
+
+
+
+      <view class="pad20" style="padding-top:50rpx;">
+        <button type='primary' formType="submit">确定</button>
+      </view>
+    </form>
+
+  </view>
+</view>

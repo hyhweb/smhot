@@ -1,18 +1,29 @@
 <view class="page">
     <view class="page__hd">
-        <view class="page__title">Grid</view>
-        <view class="page__desc">九宫格</view>
+        <view style='text-align:center'>
+            <view><image class=' large200 radius'  src="{{userInfo.header_url}}"></image></view>
+            <view class='padb20'><text>{{userInfo.user_name}}</text></view>
+
+        </view> 
     </view>
     <view class="page__bd ">
         <view class="weui-cells weui-cells_after-title">
-            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                <view class="weui-cell__bd">cell standard</view>
+            <navigator url="/pages/hotsale/collect/index" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">我的收藏</view>
                 <view class="weui-cell__ft weui-cell__ft_in-access"></view>
             </navigator>
-            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                <view class="weui-cell__bd">cell standard</view>
+             <navigator wx:if="{{userInfo.merchant==1}}" url="/pages/hotsale/mystore/index" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">我的店铺</view>
                 <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-            </navigator>
+            </navigator> 
         </view>
+    </view>
+
+    <view class='pad20' style='text-align:center' wx:if="{{userInfo.merchant==0}}">
+    <navigator url="/pages/hotsale/createStore/index">
+    <button  style='display:block;' class="weui-btn" type="primary" size="mini">
+    <text>我要开店</text>
+    </button>
+    </navigator>
     </view>
 </view>

@@ -1,16 +1,23 @@
 {
   "pages": [
+    
     "pages/hotsale/index/index",
     "pages/hotsale/list/index",
     "pages/hotsale/detail/index",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/hotsale/my/index"
+    "pages/hotsale/my/index",
+    "pages/hotsale/collect/index",
+    "pages/hotsale/createStore/index",
+    "pages/hotsale/mystore/index",
+    "pages/hotsale/release_success/index",
+    "pages/hotsale/release/index"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

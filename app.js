@@ -33,10 +33,10 @@ App({
       }
     })
   },
-
+  apiUrl: 'http://192.168.56.1:7001',
   request: function (option) {
     wx.request({
-      url: 'http://127.0.0.1:7001'+option.url, //仅为示例，并非真实的接口地址
+      url: this.apiUrl+option.url, //仅为示例，并非真实的接口地址
       method: option.method,
       data: option.data,
       header: {
